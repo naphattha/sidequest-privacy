@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delete Account – Side Quest: Routine Breaker</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f0f1a;
+      color: #e0e0e0;
+      line-height: 1.8;
+    }
+    header {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      border-bottom: 2px solid #ef4444;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.6rem; color: #f87171; letter-spacing: 1px; }
+    header p { color: #888; font-size: 0.85rem; margin-top: 6px; }
+    .badge {
+      display: inline-block;
+      background: #ef444422;
+      border: 1px solid #ef4444;
+      color: #f87171;
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+    main {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+    section {
+      background: #1a1a2e;
+      border: 1px solid #2a2a4a;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+    section h2 {
+      color: #f87171;
+      font-size: 1rem;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    section h2::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #ef4444;
+      border-radius: 2px;
+    }
+    p, li { font-size: 0.92rem; color: #c0c0d0; }
+    ul { padding-left: 20px; }
+    ul li { margin-bottom: 8px; }
+    ol { padding-left: 20px; }
+    ol li { margin-bottom: 10px; }
+    a { color: #818cf8; }
+    .highlight {
+      background: #ef444418;
+      border-left: 3px solid #ef4444;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 12px;
+      font-size: 0.88rem;
+      color: #b0b0c8;
+    }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #ef4444;
+      color: white;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .step p { margin: 0; padding-top: 2px; }
+    .warning {
+      background: #7c3aed18;
+      border: 1px solid #7c3aed44;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.88rem;
+      color: #b0b0c8;
+      margin-top: 12px;
+    }
+    .email-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 28px;
+      background: #ef4444;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .email-btn:hover { background: #dc2626; color: white; }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #555;
+      font-size: 0.8rem;
+      border-top: 1px solid #2a2a4a;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🗑️ Delete Your Account</h1>
+  <p>Side Quest: Routine Breaker</p>
+  <div class="badge">by nautolab</div>
+</header>
+
+<main>
+
+  <section>
+    <h2>Overview</h2>
+    <p>You have the right to request deletion of your account and all associated data from <strong>Side Quest: Routine Breaker</strong> at any time. Please read through the information below before submitting your request.</p>
+  </section>
+
+  <section>
+    <h2>What Data Will Be Deleted</h2>
+    <p>Upon account deletion, the following data will be <strong>permanently removed</strong> within 30 days:</p>
+    <ul>
+      <li>Your Google account link (name, email, profile picture)</li>
+      <li>Level, XP, and progression data</li>
+      <li>Streak history and dice count</li>
+      <li>Quest completion logs</li>
+      <li>All Firestore records associated with your user ID</li>
+    </ul>
+    <div class="warning">
+      ⚠️ Locally cached data stored on your device (via Hive) will be removed when you uninstall the app. We recommend uninstalling the app after your deletion request is processed.
+    </div>
+  </section>
+
+  <section>
+    <h2>How to Request Deletion</h2>
+    <div class="step">
+      <span class="step-num">1</span>
+      <p>Send an email to <strong>nautolab.dev@gmail.com</strong> with the subject line: <strong>"Account Deletion Request – Side Quest"</strong></p>
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      <p>Include the <strong>email address</strong> associated with your Google account used to sign in to the app.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      <p>We will confirm your request and process the deletion within <strong>30 days</strong>.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">4</span>
+      <p>You will receive a confirmation email once your data has been deleted.</p>
+    </div>
+    <a class="email-btn" href="mailto:nautolab.dev@gmail.com?subject=Account%20Deletion%20Request%20%E2%80%93%20Side%20Quest">
+      📧 Send Deletion Request
+    </a>
+  </section>
+
+  <section>
+    <h2>Data Retention After Deletion</h2>
+    <p>We do not retain any personal data after deletion is processed. Anonymous, aggregated analytics data (if any) that cannot be linked back to you may be retained for service improvement purposes.</p>
+    <div class="highlight">
+      Deletion is permanent and cannot be undone. Any XP, levels, streaks, or progress will be lost forever.
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions?</h2>
+    <p>If you have any questions about the deletion process, contact us at <a href="mailto:nautolab.dev@gmail.com">nautolab.dev@gmail.com</a> or visit our <a href="./index.html">Privacy Policy</a>.</p>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 nautolab · Side Quest: Routine Breaker · All rights reserved.
+</footer>
+
+</body>
+</html>
